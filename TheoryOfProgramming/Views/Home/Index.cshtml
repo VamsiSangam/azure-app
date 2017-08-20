@@ -1,31 +1,213 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    Layout = null;
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <title>Theory of Programming</title>
+    <link href="~/Content/css/home.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Theory of Programming</a>
+            
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="drop-down-data-structures" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Data Structures
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="drop-down-data-structures">
+                            <a class="dropdown-item" href="#">Graphs</a>
+                            <a class="dropdown-item" href="#">Binary Indexed Tree or Fenwick Tree</a>
+                            <a class="dropdown-item" href="#">Trie Tree</a>
+                            <a class="dropdown-item" href="#">Segment Tree</a>
+                            <a class="dropdown-item" href="#">Binary Heap</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="drop-down-algorithms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Algorithms
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="drop-down-data-structures">
+                            <a class="dropdown-item" href="#">Breadth First Search</a>
+                            <a class="dropdown-item" href="#">Depth First Search</a>
+                            <a class="dropdown-item" href="#">Bellman Ford Algorithm</a>
+                            <a class="dropdown-item" href="#">Dijkstra's Algortihm</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Java</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">C++</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <br />
+    <!-- Main content -->
+    <div class="container">
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Theory of Programming is a very helpful website that helps you in understanding a wide range of programming concepts.
+            There are many posts on Data Structures, algorithms and the Java which explain the concepts with vivid explanations,
+            well-drawn diagrams and also come with the actual code of concept.
+            Theory of Programming also has posts on solving competitive coding questions which are based on data structures and
+            algorithms discussed in the website. These help you not only to be a hero in your classroom but also a legend in the
+            coding websites such as CodeChef, SPOJ, etc.
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <h3>Choose a Topic</h3>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 topic-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Graph Theory</h4>
+                        Learn about algorithms like -
+                        <ul>
+                            <li><a href="#">Graph Data Structure</a></li>
+                            <li><a href="#">Breadth First Search</a></li>
+                            <li><a href="#">Depth First Search</a></li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">More in this topic</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 topic-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Dynamic Programming</h4>
+                        Learn about algorithms like -
+                        <ul>
+                            <li><a href="#">Edit Distance</a></li>
+                            <li><a href="#">Longest Common Subsequence</a></li>
+                            <li><a href="#">Longest Increasing Subsequence</a></li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">More in this topic</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 topic-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Tree Data Structures</h4>
+                        Learn about data structures like -
+                        <ul>
+                            <li><a href="#">Binary Heap</a></li>
+                            <li><a href="#">Binary Indexed Tree</a></li>
+                            <li><a href="#">Trie Tree</a></li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">More in this topic</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 topic-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Java</h4>
+                        Learn about Java topics like -
+                        <ul>
+                            <li><a href="#">Encapsulation</a></li>
+                            <li><a href="#">Inheritance</a></li>
+                            <li><a href="#">Polymorphism</a></li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">More in this topic</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 topic-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Searching Algorithms</h4>
+                        Learn about algorithms like -
+                        <ul>
+                            <li><a href="#">Binary Search</a></li>
+                            <li><a href="#">Jump Search</a></li>
+                            <li><a href="#">A* Algorithm</a></li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">More in this topic</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 topic-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Graph Theory</h4>
+                        Learn about algorithms like -
+                        <ul>
+                            <li><a href="#">Quicksort</a></li>
+                            <li><a href="#">Merge Sort</a></li>
+                            <li><a href="#">Insertion Sort</a></li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">More in this topic</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3>Latest Posts</h3>
+        <ul>
+            <li>Dynamic Programming – Edit Distance</li>
+            <li>Binary Search Algorithm</li>
+            <li>Kadane’s Algorithm</li>
+            <li>Java – Constructor and Overloading Methods</li>
+            <li>Encapsulation in Java</li>
+        </ul>
+        <h3>Interview Corner</h3>
+        <ul>
+            <li>Arrays interview questions</li>
+        </ul>
+        <h3>Graph Theory</h3>
+        <ul>
+            <li>Graph Theory Basics</li>
+            <li>Adjacency List Implementation in C++ STL</li>
+            <li>Adjacency List in Java</li>
+            <li>Adjacency List in C#</li>
+            <li>Breadth First Search (BFS) in C</li>
+            <li>Breadth First Search (BFS) in C++ STL</li>
+            <li>Breadth First Search (BFS) using a Queue in C++ STL</li>
+            <li>Snakes and Ladder Game by Breadth First Search (BFS)</li>
+            <li>Depth First Search (DFS)</li>
+            <li>Bellman Ford Algorithm</li>
+            <li>Bellman Ford Algorithm in C++ STL</li>
+            <li>Prim’s Algorithm</li>
+            <li>Prim’s Algorithm in C++ STL</li>
+            <li>Dijkstra’s Algorithm</li>
+        </ul>
+        <h3>Tree and Heap Data Structures</h3>
+        <ul>
+            <li>Binary Indexed Tree or Fenwick Tree</li>
+            <li>Trie Tree</li>
+            <li>Trie Tree using C++ Class</li>
+            <li>Trie Tree Practice – SPOJ – PHONELST</li>
+            <li>Trie Tree Practice – SPOJ – DICT</li>
+            <li>Compressed Trie Tree or Radix Tree or Patricia Tree</li>
+            <li>Segment Trees</li>
+            <li>Binary Heaps (using Arrays)</li>
+            <li>Binary Heaps (using Structures) and Heapsort Algorithm</li>
+        </ul>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+</html>
