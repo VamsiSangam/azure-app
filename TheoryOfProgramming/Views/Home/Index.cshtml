@@ -13,8 +13,39 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <title>Theory of Programming</title>
     <link href="~/Content/css/home.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 </head>
 <body>
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1599529033646382";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- Header -->
+    <div class="container-fluid tech-background">
+        <table class="text-light" style="height:350px; width:100%">
+            <tbody>
+                <tr>
+                    <td class="align-middle" style="width:100%">
+                        <center>
+                            <h1>Theory of Programming</h1>
+                            <p>
+                                Programming Simplified!
+                            </p>
+                            <a class="btn btn-light text-dark"><span class="fa fa-github"></span>&nbsp; GitHub</a> &nbsp;
+                            <a class="btn btn-primary"><span class="fa fa-facebook-official"></span>&nbsp; Facebook</a>
+                        </center>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
         <div class="container-fluid">
@@ -162,52 +193,152 @@
                 </div>
             </div>
         </div>
-        <h3>Latest Posts</h3>
-        <ul>
-            <li>Dynamic Programming – Edit Distance</li>
-            <li>Binary Search Algorithm</li>
-            <li>Kadane’s Algorithm</li>
-            <li>Java – Constructor and Overloading Methods</li>
-            <li>Encapsulation in Java</li>
-        </ul>
-        <h3>Interview Corner</h3>
-        <ul>
-            <li>Arrays interview questions</li>
-        </ul>
-        <h3>Graph Theory</h3>
-        <ul>
-            <li>Graph Theory Basics</li>
-            <li>Adjacency List Implementation in C++ STL</li>
-            <li>Adjacency List in Java</li>
-            <li>Adjacency List in C#</li>
-            <li>Breadth First Search (BFS) in C</li>
-            <li>Breadth First Search (BFS) in C++ STL</li>
-            <li>Breadth First Search (BFS) using a Queue in C++ STL</li>
-            <li>Snakes and Ladder Game by Breadth First Search (BFS)</li>
-            <li>Depth First Search (DFS)</li>
-            <li>Bellman Ford Algorithm</li>
-            <li>Bellman Ford Algorithm in C++ STL</li>
-            <li>Prim’s Algorithm</li>
-            <li>Prim’s Algorithm in C++ STL</li>
-            <li>Dijkstra’s Algorithm</li>
-        </ul>
-        <h3>Tree and Heap Data Structures</h3>
-        <ul>
-            <li>Binary Indexed Tree or Fenwick Tree</li>
-            <li>Trie Tree</li>
-            <li>Trie Tree using C++ Class</li>
-            <li>Trie Tree Practice – SPOJ – PHONELST</li>
-            <li>Trie Tree Practice – SPOJ – DICT</li>
-            <li>Compressed Trie Tree or Radix Tree or Patricia Tree</li>
-            <li>Segment Trees</li>
-            <li>Binary Heaps (using Arrays)</li>
-            <li>Binary Heaps (using Structures) and Heapsort Algorithm</li>
-        </ul>
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>Latest Posts</h3>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Compressed Trie Tree</a>
+                    <a href="#" class="list-group-item list-group-item-action">Jump Search Algorithm</a>
+                    <a href="#" class="list-group-item list-group-item-action">Dynamic Programming - Edit Distance</a>
+                    <a href="#" class="list-group-item list-group-item-action">Binary Search Algorithm</a>
+                    <a href="#" class="list-group-item list-group-item-action">Java - Constructor and Overloading Methods</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h3>Most Viewed Posts</h3>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Breadth First Search</a>
+                    <a href="#" class="list-group-item list-group-item-action">Trie Tree</a>
+                    <a href="#" class="list-group-item list-group-item-action">Graph and its Representations</a>
+                    <a href="#" class="list-group-item list-group-item-action">Bellman Ford Algorithm</a>
+                    <a href="#" class="list-group-item list-group-item-action">Depth First Search</a>
+                </div>
+            </div>
+        </div>
+        <br />
+        <h3>Learn something new in just a few minutes!</h3>
+        <div class="row">
+            <div class="col-lg-6 topic-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Modular Arithmetic</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">December, 2014</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 topic-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Modular Arithmetic</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">December, 2014</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 topic-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Modular Arithmetic</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">December, 2014</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 topic-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Modular Arithmetic</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">December, 2014</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 topic-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Modular Arithmetic</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">December, 2014</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 topic-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Modular Arithmetic</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">December, 2014</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Facebook comments plugin -->
+            <div class="col-sm-12">
+                <hr />
+                <div class="section">
+                    <h4>Comments</h4>
+                    <div class="fb-comments" data-href="https://vamsisangam.github.io/theoryofprogramming/" data-width="100%" data-numposts="5"></div>
+                </div>
+            </div>
+        </div>
     </div>
+    <footer class="tech-background">
+        <div class="col-sm-12 text-light" style="box-shadow: 0 -4px 4px 0 rgba(0,0,0,0.14);">
+            <div class="container" style="padding-top:30px; padding-bottom:30px;">
+                <table id="footer-table">
+                    <tbody>
+                        <tr>
+                            <td colspan="0">
+                                <center>
+                                    <h1>Theory of Programming</h1>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <center>
+                                    <br>
+                                    This website is only lacking your support! Support us by liking and sharing Theory of Programming on Facebook!
+                                    <br><br>
+                                    <div class="fb-like" data-href="https://www.facebook.com/TheoryOfProgramming" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <br>
+                                    Theory of Programming is open source! Contribute by starring and forking Theory of Programming on GitHub!
+                                    <br><br>
+                                    <!-- Place this tag where you want the button to render. -->
+                                    <a aria-label="Star vamsisangam/theoryofprogramming on GitHub" data-show-count="true" data-size="large" href="https://github.com/vamsisangam/theoryofprogramming" class="github-button">Star</a>
+                                    <!-- Place this tag where you want the button to render. -->
+                                    <a aria-label="Fork vamsisangam/theoryofprogramming on GitHub" data-show-count="true" data-size="large" href="https://github.com/vamsisangam/theoryofprogramming/fork" class="github-button">Fork</a>
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <br>
+                                    Donate to Theory of Programming on PayPal. Your donation will help cover domain and server costs.
+                                    <br><br>
+                                    <a class="btn btn-success"><i class="fa fa-paypal"></i> &nbsp; Donate</a> &nbsp;
+                                </center>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>
