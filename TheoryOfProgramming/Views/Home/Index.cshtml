@@ -15,9 +15,14 @@
 
     <link href="~/Content/css/home.css" rel="stylesheet" />
     <link rel="shortcut icon" href="~/Content/img/shortcut-icon.png">
+    
+    <link href="~/Content/css/component.css" rel="stylesheet" />
+    <link href="~/Content/css/demo.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+
 </head>
-<body>
+<body class="texture-crossword">
     <!-- Facebook SDK -->
     <div id="fb-root"></div>
     <script>
@@ -30,16 +35,16 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
     <!-- Header -->
-    <div class="container-fluid tech-background">
+    <div class="container-fluid tech-background"  style="box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);">
         <table class="text-light" style="height:350px; width:100%">
             <tbody>
                 <tr>
                     <td class="align-middle" style="width:100%">
                         <center>
+                            <i class="fa fa-3x fa-code"></i>
                             <h1>Theory of Programming</h1>
-                            <p>
-                                Programming Simplified!
-                            </p>
+                            <p>Programming Simplified!</p>
+                            <br />
                             <a class="btn btn-light text-dark"><span class="fa fa-github"></span>&nbsp; GitHub</a> &nbsp;
                             <a class="btn btn-primary"><span class="fa fa-facebook-official"></span>&nbsp; Facebook</a>
                         </center>
@@ -48,55 +53,121 @@
             </tbody>
         </table>
     </div>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Theory of Programming</a>
-            
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="http://example.com" id="drop-down-data-structures" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Data Structures
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="drop-down-data-structures">
-                            <a class="dropdown-item" href="#">Graphs</a>
-                            <a class="dropdown-item" href="#">Binary Indexed Tree or Fenwick Tree</a>
-                            <a class="dropdown-item" href="#">Trie Tree</a>
-                            <a class="dropdown-item" href="#">Segment Tree</a>
-                            <a class="dropdown-item" href="#">Binary Heap</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="http://example.com" id="drop-down-algorithms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Algorithms
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="drop-down-data-structures">
-                            <a class="dropdown-item" href="#">Breadth First Search</a>
-                            <a class="dropdown-item" href="#">Depth First Search</a>
-                            <a class="dropdown-item" href="#">Bellman Ford Algorithm</a>
-                            <a class="dropdown-item" href="#">Dijkstra's Algortihm</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Java</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">C++</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">GitHub</a>
-                    </li>
+    <!-- Main container -->
+    <!-- Multi level nav bar -->
+    <div class="bp-multi-nav">
+        <!-- Blueprint header -->
+        <div id="ml-menu-logo" class="dummy-logo z-depth-2 texture-dark-mosaic">
+            <br />
+            <i class="fa fa-3x fa-code"></i>
+            <h4>Theory of Programming</h4>
+        </div>
+        <nav id="ml-menu" class="menu z-depth-2 texture-dark-mosaic">
+            <a class="action action--close text-light" aria-label="Close Menu">
+                <i class="fa fa-close"></i>
+            </a>
+            <div class="menu__wrap">
+                <!-- menu-main -->
+                <ul data-menu="menu-main" class="menu__level" tabindex="-1" role="menu" aria-label="Home">
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Home</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-data-structures-and-algorithms" aria-owns="menu-data-structures-and-algorithms" href="#">Data Structures and Algorithms</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-java" aria-owns="menu-java" href="#">Java</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-cpp" aria-owns="menu-cpp" href="#">C++</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-interview-corner" aria-owns="menu-interview-corner" href="#">Interview Corner</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Team</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">GitHub</a></li>
+                </ul>
+                <!-- menu-data-structures-and-algorithms -->
+                <ul data-menu="menu-data-structures-and-algorithms" id="menu-data-structures-and-algorithms" class="menu__level" tabindex="-1" role="menu" aria-label="Data Structures and Algorithms">
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-graph-theory" aria-owns="menu-graph-theory" href="#">Graph Theory</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-tree-data-structures" aria-owns="menu-tree-data-structures" href="#">Tree Data Structures</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-dynamic-programming" aria-owns="menu-dynamic-programming" href="#">Dynamic Programming</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-searching-algorithms" aria-owns="menu-searching-algorithms" href="#">Searching Algorithms</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-sorting-algorithms" aria-owns="menu-sorting-algorithms" href="#">Sorting Algorithms</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-math" aria-owns="menu-math" href="#">Math</a></li>
+                </ul>
+                <!-- menu-graph-theory -->
+                <ul data-menu="menu-graph-theory" id="menu-graph-theory" class="menu__level" tabindex="-1" role="menu" aria-label="Graph Theory">
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Graph Theory Basics</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Breadth First Search (BFS) Algorithm</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Snakes and Ladders Game Code</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Depth First Search</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Bellman Ford Algorithm</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Prim's Algorithm</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Dijkstra's Algorithm</a></li>
+                </ul>
+                <!-- menu-tree-data-structures -->
+                <ul data-menu="menu-tree-data-structures" id="menu-tree-data-structures" class="menu__level" tabindex="-1" role="menu" aria-label="Tree Data Structures">
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Binary Indexed Tree (or) Fenwick Tree</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Trie Tree</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Compressed Trie Tree</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Segment Tree</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Binary Heap</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Binary Heap and Heap sort algorithm</a></li>
+                </ul>
+                <!-- menu-dynamic-programming -->
+                <ul data-menu="menu-dynamic-programming" id="menu-dynamic-programming" class="menu__level" tabindex="-1" role="menu" aria-label="Dynamic Programming">
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Introduction and Fibonacci Numbers</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Kadane's Algorithm</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Edit Distance</a></li>
+                </ul>
+                <!-- menu-searching-algorithms -->
+                <ul data-menu="menu-searching-algorithms" id="menu-searching-algorithms" class="menu__level" tabindex="-1" role="menu" aria-label="Searching Algorithms">
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Binary Search Algorithm</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Jump Search Algorithm</a></li>
+                </ul>
+                <!-- menu-sorting-algorithms -->
+                <ul data-menu="menu-sorting-algorithms" id="menu-sorting-algorithms" class="menu__level" tabindex="-1" role="menu" aria-label="Sorting Algorithms">
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Quick Sort Algorithm</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Merge Sort Algorithm</a></li>
+                </ul>
+                <!-- menu-math -->
+                <ul data-menu="menu-math" id="menu-math" class="menu__level" tabindex="-1" role="menu" aria-label="Math">
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Modular Arithmetic Properties</a></li>
+                </ul>
+                <!-- menu-java -->
+                <ul data-menu="menu-java" id="menu-java" class="menu__level" tabindex="-1" role="menu" aria-label="Java">
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-java-language-basics" aria-owns="menu-java-language-basics" href="#">Language Basics</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-java-introduction-to-oop" aria-owns="menu-java-introduction-to-oop" href="#">Introduction to OOP</a></li>
+                </ul>
+                <!-- menu-java-language-basics -->
+                <ul data-menu="menu-java-language-basics" id="menu-java-language-basics" class="menu__level" tabindex="-1" role="menu" aria-label="Language Basics">
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">An Introduction</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Data types, Input and Operators</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">If-else, switch and loops</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">String, StringBuilder and StringBuffer</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Arrays in Java</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Enum and methods in Java</a></li>
+                </ul>
+                <!-- menu-java-introduction-to-oop -->
+                <ul data-menu="menu-java-introduction-to-oop" id="menu-java-introduction-to-oop" class="menu__level" tabindex="-1" role="menu" aria-label="Introduction to OOP">
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Classes and Objects</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Encapsulation in Java</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Constructor and Overloading methods</a></li>
+                </ul>
+                <!-- menu-cpp -->
+                <ul data-menu="menu-cpp" id="menu-cpp" class="menu__level" tabindex="-1" role="menu" aria-label="C++">
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-cpp-basics" aria-owns="menu-cpp-basics" href="#">Basics</a></li>
+                </ul>
+                <!-- menu-cpp-basics -->
+                <ul data-menu="menu-cpp-basics" id="menu-cpp-basics" class="menu__level" tabindex="-1" role="menu" aria-label="C++ Basics">
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Why should I learn C++?</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">C++ programming style and structure</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Variables, initialization and assignment</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Writing professional code in C++</a></li>
+                </ul>
+                <!-- menu-interview-corner -->
+                <ul data-menu="menu-interview-corner" id="menu-interview-corner" class="menu__level" tabindex="-1" role="menu" aria-label="Interview Corner">
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Arrays Interview Questions</a></li>
                 </ul>
             </div>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
+        </nav>
+    </div>
+    <!-- /view -->
+    <!-- Menu toggle button -->
+    <button class="btn btn-danger btn-lg text-light rounded-circle action--open" style="display:block;" aria-label="Open Menu" id="menu-toggle-btn">
+        <i class="fa fa-navicon"></i>
+    </button>
     <br />
     <!-- Main content -->
     <div class="container">
@@ -298,6 +369,7 @@
                         <tr>
                             <td colspan="0">
                                 <center>
+                                    <i class="fa fa-3x fa-code"></i>
                                     <h1>Theory of Programming</h1>
                                 </center>
                             </td>
@@ -338,9 +410,78 @@
     </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <script src="~/Scripts/modernizr-custom.js"></script>
+    <script src="~/Scripts/getEmPixels.min.js"></script>
+    <script src="~/Scripts/classie.js"></script>
+    <script src="~/Scripts/multi-level-menu.js"></script>
+    <!-- Script for controlling multi level navigation menu -->
+    <script>
+        (function () {
+		    var menuEl = document.getElementById('ml-menu'),
+			    mlmenu = new MLMenu(menuEl, {
+				    breadcrumbsCtrl : false, // show breadcrumbs
+				    // initialBreadcrumb : 'all', // initial breadcrumb text
+				    backCtrl : true, // show back button
+				    // itemsDelayInterval : 60, // delay between each menu item sliding animation
+				    // onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
+			    });
+
+		    // mobile menu toggle
+		    var openMenuCtrl = document.querySelector('.action--open'),
+			    closeMenuCtrl = document.querySelector('.action--close');
+            var navOpened = true;
+
+		    openMenuCtrl.addEventListener('click', openMenu);
+		    closeMenuCtrl.addEventListener('click', closeMenu);
+
+		    function openMenu() {
+			    classie.add(menuEl, 'menu--open');
+			    closeMenuCtrl.focus();
+		    }
+
+		    function closeMenu() {
+			    classie.remove(menuEl, 'menu--open');
+			    openMenuCtrl.focus();
+                navOpened = false;
+		    }
+
+		    // simulate grid content loading
+		    var gridWrapper = document.querySelector('.content');
+
+            $('#menu-toggle-btn').click(function() {
+                if (window.innerWidth >= 40 * getEmPixels()) {
+                    console.log("40em = " + (40 * getEmPixels()));
+                    console.log("window.innerWidth = " + window.innerWidth);
+
+                    if (navOpened) {
+                        $('#ml-menu-logo').css('margin-left', '0px');
+                        $('#ml-menu').css('margin-left', '0px');
+                        navOpened = false;
+                    } else {
+                        $('#ml-menu-logo').css('margin-left', '-300px');
+                        $('#ml-menu').css('margin-left', '-300px');
+                        navOpened = true;
+                    }
+                } else {
+                    var width = -1 * window.innerWidth;
+
+                    if (navOpened) {
+                        $('#ml-menu-logo').css('margin-left', '0px');
+                        $('#ml-menu').css('margin-left', '0px');
+                        navOpened = false;
+                    } else {
+                        $('#ml-menu-logo').css('margin-left', width);
+                        $('#ml-menu').css('margin-left', width);
+                        navOpened = true;
+                    }
+                }
+            });
+	    })();
+    </script>
 </body>
 </html>

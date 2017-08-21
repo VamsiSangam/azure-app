@@ -203,6 +203,8 @@
   <ItemGroup>
     <Content Include="Content\css\home.css" />
     <Content Include="Content\img\background.jpg" />
+    <Content Include="Content\img\crossword.png" />
+    <Content Include="Content\img\shortcut-icon.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
